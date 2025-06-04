@@ -13,7 +13,7 @@ def add_profile(request):
         form = StudentProfileForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('list_profiles')
+            return redirect('student_list')
     else:
         form = StudentProfileForm()
     return render(request, 'education_app/add_profile.html', {'form': form})
