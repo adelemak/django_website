@@ -1,0 +1,7 @@
+{% extends 'pages_app/base_pages.html' %}
+
+{% block content %}
+  <h1>{{ program.name }}</h1>
+  <p><a href="{{ program.url }}" target="_blank">Ссылка на ОП</a></p>
+  <div>{{ program.description|linebreaks }}</div>
+{% endblock %}

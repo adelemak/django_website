@@ -1,0 +1,11 @@
+{% extends 'pages_app/base_pages.html' %}
+
+{% block content %}
+  <h1>{{ about.full_name }}</h1>
+  <img src="{{ about.photo.url }}" alt="{{ about.full_name }}" width="200">
+  <p><strong>Email:</strong><a href="mailto:{{ about.email }}">{{ about.email }}</a></p>
+  <p><strong>Телефон:</strong> {{ about.phone }}</p>
+  <h3>Резюме:</h3>
+  <p>{{ about.resume }}</p>
+{% endblock %}
+

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Проект по майнору</h1>
+  <p>Выберите раздел:</p>
+
+  <div class="d-grid gap-3">
+    <a href="{% url 'add_profile' %}" class="btn btn-primary btn-lg">Заполнить форму</a>
+    <a href="/pages/" class="btn btn-secondary btn-lg">Приложение 2</a>
+  </div>
+{% endblock %}

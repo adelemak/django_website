@@ -1,0 +1,28 @@
+{% extends 'pages_app/base_pages.html' %}
+
+{% block content %}
+
+  <h2>Академический руководитель</h2>
+  {% for person in staff %}
+    {% if person.role == 'head' %}
+      <div class="person-card">
+        <img src="{{ person.photo.url }}" alt="{{ person.full_name }}" width="150" />
+        <p><strong>{{ person.full_name }}</strong></p>
+        <p>Email: <a href="mailto:{{ person.email }}">{{ person.email }}</a></p>
+        <p>Телефон: {{ person.phone }}</p>
+      </div>
+    {% endif %}
+  {% endfor %}
+
+  <h2>Менеджеры</h2>
+  {% for person in staff %}
+    {% if person.role == 'manager' %}
+      <div class="person-card">
+        <img src="{{ person.photo.url }}" alt="{{ person.full_name }}" width="150" />
+        <p><strong>{{ person.full_name }}</strong></p>
+        <p>Email: <a href="mailto:{{ person.email }}">{{ person.email }}</a></p>
+        <p>Телефон: {{ person.phone }}</p>
+      </div>
+    {% endif %}
+  {% endfor %}
+{% endblock %}
